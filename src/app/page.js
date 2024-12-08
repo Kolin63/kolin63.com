@@ -38,7 +38,7 @@ export default function Game()
   return (
     <div className='game'>
       <div className='game-board'>
-        <Board isXNext={!(currentMove % 2)} squares={currentSquares} onPlay={handlePlay} />
+        <Board isXNext={!(currentMove % 2)} squares={currentSquares} onPlay={handlePlay} currentMove={currentMove} />
       </div>
       <div className='game-info'>
         <ol>{moves}</ol>
@@ -56,7 +56,7 @@ function Square({ value, onSquareClick })
   );
 }
 
-function Board({isXNext, squares, onPlay}) 
+function Board({isXNext, squares, onPlay, currentMove}) 
 {
   function handleClick(i)
   {
@@ -72,8 +72,10 @@ function Board({isXNext, squares, onPlay})
   let status;
   if (winner)
     status = "Winner: " + winner;
+  else if (currentMove === 9)
+    status = "Draw";
   else
-    status = "Next player: " + (isXNext ? 'X' : 'O')
+    status = "Next player: " + (isXNext ? 'X' : 'O');
 
   return (
     <>
