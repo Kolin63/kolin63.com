@@ -1,0 +1,55 @@
+@font-face {
+    font-family: CascadiaMono;
+    src: url(./fonts/CascadiaMono.woff2);
+}
+
+@font-face {
+    font-family: CascadiaMonoSemiLight;
+    src: url(./fonts/CascadiaMono-SemiLight.woff2);
+}
+
+body {
+    font-family: CascadiaMonoSemiLight;
+    color: #0f0;
+    background: #222;
+    margin: min(5px);
+    margin: max(150px); 
+    font-size: 25px;
+    border: 100px solid #222;
+    border-radius: 50px;
+}
+
+h1 {
+    font-family: CascadiaMono;
+    font-size: 200px;
+    text-align: center; 
+    background: #222;
+}
+
+h2 {
+    font-family: CascadiaMonoSemiLight;
+    font-size: 120px;
+    text-align: center; 
+    background: #222;
+}
+
+html {
+    background: #000;
+}
+
+button {
+    background: #151515;
+    border: 30px solid #151515;
+    font-family: CascadiaMono;
+    color: #0f0;
+    font-size: 100px;
+    border-radius: 25px;
+    margin: 20px;
+}
+
+a:link {
+    color: #0f0;
+}
+a:visited {
+    color: #0f0;
+}
