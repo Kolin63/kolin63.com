@@ -5,6 +5,7 @@ export default function Game()
 {
   const [history, setHistory] = useState([Array(9).fill(null)]);
   const [currentMove, setCurrentMove] = useState(0);
+  const [green, setGreen] = useState([Array(9).fill(false)]);
   const currentSquares = history[currentMove];
 
   function handlePlay(nextSquares)
@@ -38,7 +39,7 @@ export default function Game()
   return (
     <div className='game'>
       <div className='game-board'>
-        <Board isXNext={!(currentMove % 2)} squares={currentSquares} onPlay={handlePlay} currentMove={currentMove} />
+        <Board isXNext={!(currentMove % 2)} squares={currentSquares} onPlay={handlePlay} currentMove={currentMove} green={green} />
       </div>
       <div className='game-info'>
         <ol>{moves}</ol>
@@ -47,20 +48,22 @@ export default function Game()
   )
 }
 
-function Square({ value, onSquareClick }) 
+function Square({ value, onSquareClick, green }) 
 {
   return (
-    <button className='square' onClick={onSquareClick}>
+    <button 
+      className={(green ? 'green-square' : 'square')}
+      onClick={onSquareClick}>
       {value}
     </button>
   );
 }
 
-function Board({isXNext, squares, onPlay, currentMove}) 
+function Board({isXNext, squares, onPlay, currentMove, green}) 
 {
   function handleClick(i)
   {
-    if ((squares[i] != null) || calculateWinner(squares))
+    if ((squares[i] != null) || calculateWinner(squares, green))
       return;
 
     const nextSquares = squares.slice();
@@ -68,7 +71,7 @@ function Board({isXNext, squares, onPlay, currentMove})
     onPlay(nextSquares);
   }
 
-  const winner = calculateWinner(squares)
+  const winner = calculateWinner(squares, green)
   let status;
   if (winner)
     status = "Winner: " + winner;
@@ -81,25 +84,25 @@ function Board({isXNext, squares, onPlay, currentMove})
     <>
       <div className='status'>{status}</div>
       <div className="board-row">
-        <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
-        <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
-        <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
+        <Square value={squares[0]} onSquareClick={() => handleClick(0)} green={green[0]} />
+        <Square value={squares[1]} onSquareClick={() => handleClick(1)} green={green[1]} />
+        <Square value={squares[2]} onSquareClick={() => handleClick(2)} green={green[2]} />
       </div>
       <div className="board-row">
-        <Square value={squares[3]} onSquareClick={() => handleClick(3)} />
-        <Square value={squares[4]} onSquareClick={() => handleClick(4)} />
-        <Square value={squares[5]} onSquareClick={() => handleClick(5)} />
+        <Square value={squares[3]} onSquareClick={() => handleClick(3)} green={green[3]} />
+        <Square value={squares[4]} onSquareClick={() => handleClick(4)} green={green[4]} />
+        <Square value={squares[5]} onSquareClick={() => handleClick(5)} green={green[5]} />
       </div>
       <div className="board-row">
-        <Square value={squares[6]} onSquareClick={() => handleClick(6)} />
-        <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
-        <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
+        <Square value={squares[6]} onSquareClick={() => handleClick(6)} green={green[6]} />
+        <Square value={squares[7]} onSquareClick={() => handleClick(7)} green={green[7]} />
+        <Square value={squares[8]} onSquareClick={() => handleClick(8)} green={green[8]} />
       </div>
     </>
   )
 }
 
-function calculateWinner(squares)
+function calculateWinner(squares, green)
 {
   const lines = [
     [0, 1, 2],
@@ -116,7 +119,19 @@ function calculateWinner(squares)
   {
     const [a, b, c] = lines[i]
     if ((squares[a] != null) && (squares[a] === squares[b]) && (squares[a] === squares[c]))
+    {
+      green[a] = true;
+      green[b] = true;
+      green[c] = true;
+
       return squares[a];
+    }
+    else
+    {
+      green[a] = false;
+      green[b] = false;
+      green[c] = false;
+    }
   }
   return null;
 }
