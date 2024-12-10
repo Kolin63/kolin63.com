@@ -29,30 +29,16 @@ p {
     border-radius: 3vw;
 }
 
-@media screen and (max-width: 1000px) {
-    p {
-        font-size: 60px;
-    }
-    h1 {
-        font-size: 100px;
-    }
-
-}
-
-
 .top-bar {
-    z-index: 1;
-
     display: flex;
     justify-content: space-between;
 
-    font-size: 4vw;
+    font-size: 30px;
     font-family: 'Courier New', Courier, monospace;
     color: #fff;
 
     margin: 0;
     padding: 2vw;
-    padding-right: 3vw;
 
     background-color: #313d4b;
     border-radius: 3vw;
@@ -63,13 +49,15 @@ p {
     justify-content: flex-start;
 }
 
-.top-bar-links {
+.top-bar-right {
     display: inline flex;
     justify-content: flex-end;
 }
 
 .top-bar a {
-    margin-left: 3vw;
+    font-size: 30px;
+    margin-right: 1vw;
+    margin-left: 1vw;
     text-decoration: none;
 }
 
@@ -79,22 +67,23 @@ p {
 
 body {
     margin: 6vw;
-
     background-color: #212932;
 }
 
-.tab-list {
-    background-color: #999;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    height: 50px;
+* {
+    overflow: hidden
+}
 
-    text-align: Center;
-    font-size: 40px;
-    font-family: 'Courier New', Courier, monospace;
-    color: #fff;
-    padding-top: 5px;
-    padding-bottom: 5px;
+@media screen and (max-width: 1000px) {
+    p {
+        font-size: 60px;
+    }
+    h1 {
+        font-size: 100px;
+    }
+    .top-bar a {
+        font-size: 40px;
+    }
 }
 
 .courier-prime-regular {
