@@ -16,7 +16,7 @@ h1 {
 
 p {
     text-align:left;
-    font-size: 2vw;
+    font-size: 24px;
     font-family: 'Courier New', Courier, monospace;
     color:#fff;
 
@@ -40,16 +40,8 @@ p {
     margin: 0;
     padding: 2vw;
 
-    background-color: #2c3743;
-    border-bottom-left-radius: 3vw;
-    border-bottom-right-radius: 3vw;
-    border-color: #212932;
-    border-style: solid;
-    border-width: 1vw;
-    
-    width: 81vw;
-    position:fixed;
-    top: 0vw;
+    background-color: #313d4b;
+    border-radius: 3vw;
 }
 
 .top-bar-left {
