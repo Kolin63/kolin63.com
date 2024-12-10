@@ -70,10 +70,6 @@ body {
     background-color: #212932;
 }
 
-* {
-    overflow: hidden
-}
-
 @media screen and (max-width: 1000px) {
     p {
         font-size: 60px;
