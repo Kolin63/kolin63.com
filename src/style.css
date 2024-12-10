@@ -27,7 +27,7 @@ p {
     border-radius: 3vw;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     p {
         font-size: 48px;
     }
