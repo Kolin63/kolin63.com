@@ -76,6 +76,32 @@ p {
     text-decoration: none;
 }
 
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.project-box {
+    text-align:left;
+    font-size: 30px;
+    line-height: 150%;
+    font-family: 'Courier New', Courier, monospace;
+    color:#fff;
+
+    padding: 3vw;
+    margin: 1vw;
+
+    background-color: #313d4b;
+    border-radius: 3vw;
+
+    height: 300px;
+}
+
+.project-box img {
+    height: 100%;
+}
+
 :any-link {
     color: #fff;
 }
