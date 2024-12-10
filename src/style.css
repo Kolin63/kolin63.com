@@ -2,13 +2,14 @@
 
 h1 {
     text-align: center;
-    font-size: 10vw;
+    font-size: 50px;
     font-family: 'Courier New', Courier, monospace;
     color: #fff;
 
     padding: 3vw;
     position: relative;
     top: 5vw;
+    margin-bottom: 8vw;
 
     background-color: #313d4b;
     border-radius: 3vw;
@@ -16,7 +17,8 @@ h1 {
 
 p {
     text-align:left;
-    font-size: 24px;
+    font-size: 30px;
+    line-height: 150%;
     font-family: 'Courier New', Courier, monospace;
     color:#fff;
 
@@ -29,8 +31,12 @@ p {
 
 @media screen and (max-width: 800px) {
     p {
-        font-size: 48px;
+        font-size: 60px;
     }
+    h1 {
+        font-size: 100px;
+    }
+
 }
 
 
@@ -46,6 +52,7 @@ p {
 
     margin: 0;
     padding: 2vw;
+    padding-right: 3vw;
 
     background-color: #313d4b;
     border-radius: 3vw;
@@ -61,8 +68,9 @@ p {
     justify-content: flex-end;
 }
 
-.top-bar-links a {
+.top-bar a {
     margin-left: 3vw;
+    text-decoration: none;
 }
 
 :any-link {
