@@ -1,0 +1,3 @@
+[submodule "apps/qrclicker"]
+	path = apps/qrclicker
+	url = https://github.com/kolin63/qrclicker
