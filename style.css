@@ -3,14 +3,18 @@ p {
   line-height: 2;
   font-family: "Times New Roman", Times, serif;
   font: 12px;
-  /* color: #ebdbb2; */
   text-align: justify;
   text-justify: inter-word;
 }
 
 body {
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid black;
   max-width: 100ch;
   margin-left: auto;
   margin-right: auto;
-  /* background-color: #282828; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  min-height: 90vh;
 }
