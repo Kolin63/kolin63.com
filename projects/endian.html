@@ -21,7 +21,90 @@
     <td><a href="/gallery">Gallery</a></td>
   </tr></table>
 
+  <table class="bordered">
+    <tr><th>Project Links</th></tr>
+    <tr><td><a target="_blank" href="https://github.com/kolin63/endian-engine">Github: Endian Engine</a></td></tr>
+    <tr><td><a target="_blank" href="https://github.com/kolin63/endian-base">Github: Endian Base Mod</a></td></tr>
+  </table>
+
   <p>
+  Endian is my current project, and is larger than anything I've made before.
+  </p>
+
+  <p>
+  The gameplay is very similar to that of <a href="/projects/adriencoin.html">Adriencoin</a>,
+  except that the economical restrictions try to be more emergent rather than
+  stricly enforced. Also, it's space themed!
+  </p>
+
+  <h2>Mod-Based Engine</h2>
+
+  <p>
+  The reason that it's taking so long to make is that I am putting a lot of
+  effort into making a mod-based engine. I have some PTSD from trying to add
+  content to Adriencoin because the game was held together with duct tape.
+  </p>
+
+  <p>
+  To avoid that, I am implementing what I call the
+  <a target="_blank" href="https://hytale.com">Hytale</a> philosophy. This means
+  that everything in the game is a mod and that nothing is hard coded. Not
+  because I expect others to mod my game, but because I want to be able to add
+  new content with ease. This could also be referred to as
+  <a target="_blank" href="https://en.wikipedia.org/wiki/Eating_your_own_dog_food">dogfooding</a>.
+  </p>
+
+  <h2>Static Code Generation</h2>
+
+  <p>
+  One system which I am especially happy with is the static code generation
+  (which I also call compile time reflection, even though it's not really
+  reflection in a typical sense).
+  </p>
+
+  <p>
+  I got the inspiration for this from
+  <a target="_blank" href="https://github.com/cogmasters/concord">Concord</a>,
+  the library I use to run the Discord bot.
+  </p>
+
+  <p>
+  Lucas Muller, the maintainer of Concord, also made a library called
+  <a target="_blank" href="https://github.com/lcsmuller/reflect-c">Reflect-C</a>,
+  which he uses in Concord. This library takes "recipe" files, which are formatted
+  for easy parsing, as input, and generates proper C code that can then be compiled.
+  </p>
+
+  <p>
+  The main takeaway here is that the library uses a seperate executable that
+  must be ran before the compiler can work.
+  </p>
+
+  <p>
+  I believe that Muller did this mostly to keep the code DRY (don't repeat
+  yourself). This was one of my motives, but I also did it to make the
+  development process easier and to make the game run faster.
+  </p>
+
+  <p>
+  Previously, all mod files would be in JSON, and they would have to parsed at
+  startup (using my <a target="_blank" href="/projects/registry.c.html">Registry.c</a>
+  library). This worked great, but the problem was the game didn't know anything
+  at compile time. This was even worse when loading shared objects (C code compiled
+  into a file that can be loaded and ran at runtime), because everything had to
+  be degraded into a function pointer.
+  </p>
+
+  <p>
+  This means that the compiler could make no optimizations. When I tested the
+  difference between optimized function calls and function pointers, the pointers
+  were about half as fast.
+  </p>
+
+  <p>
+  But with my static code generation, I can have the benefits of modular and
+  independent systems with the benefits of compiler optimizations. Very fun
+  stuff!
   </p>
 
 </body>
