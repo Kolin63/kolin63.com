@@ -21,7 +21,67 @@
     <td><a href="/gallery">Gallery</a></td>
   </tr></table>
 
+  <table class="bordered">
+    <tr><th>Project Links</th></tr>
+    <tr><td><a target="_blank" href="https://github.com/kolin63/strint">Github</a></td></tr>
+  </table>
+
   <p>
+  Strint is a simple C library that converts integers to strings and strings to
+  integers.
+  </p>
+
+  <p>
+  It was a very simple one-day project, but it is so useful that I figured it
+  needed to be included here.
+  </p>
+
+  <h2>Why</h2>
+
+  <p>
+  In C, there is a function in the standard library called <code>printf</code>.
+  The most basic use of this function is to write text to the terminal. For example:
+  </p>
+  <code class="block">
+    printf("Hello, World!\n");<br>
+    // prints: "Hello, World!"
+  </code>
+  <p>
+  You can also use formatters to insert variables:
+  </p>
+  <code class="block">
+    int age = 23;<br>
+    printf("I am %i years old.\n", age);<br>
+    // prints: "I am 23 years old."
+  </code>
+  <p>
+  You can also have <code>printf</code> write to a buffer with <code>snprintf</code>.
+  Therefore, you can use the formatters to convert an integer to a string and
+  write it to a buffer:
+  </p>
+  <code class="block">
+    char buf[32];<br>
+    int age = 23;<br>
+    snprintf(buf, sizeof(buf), "%i", age);<br>
+    printf("%s\n", buf);<br>
+    // prints: "23"<br>
+  </code>
+
+  <p>
+  This may seem perfectly fine, but the problem is that <code>printf</code> is
+  essentially a tiny interpreter. Just like Python or any other scripting
+  language, the interpreter adds an extra layer of abstraction. This makes the
+  code easier to write, but much slower to run.
+  </p>
+
+  <p>
+  If you are ever writing a program that needs to convert millions of numbers
+  into strings, <code>printf</code> will not be your friend.
+  </p>
+
+  <p>
+  Also, I'm sure many other people have written the same exact library, but it
+  always helps me to know that my code does what I need it to do.
   </p>
 
 </body>
