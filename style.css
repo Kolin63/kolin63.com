@@ -8,7 +8,10 @@ p, a {
   line-height: 2;
   text-align: justify;
   text-justify: inter-word;
-  margin-bottom: 0;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 h1 {
@@ -88,6 +91,19 @@ img {
 
 ul, ol {
   margin-top: 0;
+}
+
+code {
+  font-family: "JetBrainsMono", mono, serif;
+}
+
+code.block {
+  display: block;
+  margin: 8px;
+  padding: 8px;
+  background: lightgray;
+  background-size: contain;
+  border: 1px solid gray;
 }
 
 @media screen and (orientation: portrait) {
