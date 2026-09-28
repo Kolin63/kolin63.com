@@ -1,6 +1,10 @@
+:root {
+  --mobile: 1;
+}
+
 html * {
   font-family: "Times New Roman", Times, serif;
-  font-size: 16px;
+  font-size: calc(var(--mobile) * 16px);
 }
 
 p, a {
@@ -8,33 +12,33 @@ p, a {
   line-height: 2;
   text-align: justify;
   text-justify: inter-word;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: calc(var(--mobile) * 16px);
+  margin-bottom: calc(var(--mobile) * 16px);
   margin-left: 0;
   margin-right: 0;
 }
 
 h1 {
-  font-size: 32px;
-  padding-bottom: 16px;
+  font-size: calc(var(--mobile) * 32px);
+  padding-bottom: calc(var(--mobile) * 16px);
   border-bottom: 1px solid black;
 }
 
 h2 {
-  font-size: 24px;
-  padding-bottom: 16px;
-  margin-top: 32px;
+  font-size: calc(var(--mobile) * 24px);
+  padding-bottom: calc(var(--mobile) * 16px);
+  margin-top: calc(var(--mobile) * 32px);
   border-bottom: 1px solid gray;
 }
 
 body {
-  padding: 16px;
+  padding: calc(var(--mobile) * 16px);
   border: 1px solid black;
   max-width: 80ch;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: calc(var(--mobile) * 16px);
+  margin-bottom: calc(var(--mobile) * 16px);
   min-height: 90vh;
 }
 
@@ -48,15 +52,15 @@ td {
   padding-bottom: 0px;
   padding-right: 8px;
   padding-left: 0px;
-  margin: 16px;
+  margin: calc(var(--mobile) * 16px);
 }
 
 table.bordered {
   border: 1px solid black;
   padding: 0;
   border-collapse: collapse;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: calc(var(--mobile) * 16px);
+  margin-bottom: calc(var(--mobile) * 16px);
 }
 
 table.bordered > tbody {
@@ -72,12 +76,12 @@ table.bordered > tbody > tr {
 table.bordered > tbody > tr > th {
   border: 1px solid black;
   text-align: left;
-  padding: 4px;
+  padding: calc(var(--mobile) * 4px);
 }
 
 table.bordered > tbody > tr > td {
   border: 1px solid black;
-  padding: 4px;
+  padding: calc(var(--mobile) * 4px);
 }
 
 img {
@@ -85,8 +89,8 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: calc(var(--mobile) * 16px);
+  margin-bottom: calc(var(--mobile) * 16px);
 }
 
 ul, ol {
@@ -99,8 +103,8 @@ code {
 
 code.block {
   display: block;
-  margin: 8px;
-  padding: 8px;
+  margin: calc(var(--mobile) * 8px);
+  padding: calc(var(--mobile) * 8px);
   background: lightgray;
   background-size: contain;
   border: 1px solid gray;
@@ -108,47 +112,26 @@ code.block {
 
 table.footer {
   max-width: 80ch;
-  max-height: 16px;
-  font-size: 12px;
+  max-height: calc(var(--mobile) * 16px);
+  font-size: calc(var(--mobile) * 12px);
   margin-left: auto;
   margin-right: auto;
   background: lightgray;
-  padding: 4px;
+  padding: calc(var(--mobile) * 4px);
 }
 
 table.footer > tbody > tr > td > img {
   display: inline-block;
   margin: 0;
-  height: 12px;
+  height: calc(var(--mobile) * 12px);
 }
 
 @media screen and (orientation: portrait) {
-  html * {
-    font-size: 32px;
-  }
-
-  h1 {
-    font-size: 64px;
-    padding-bottom: 32px;
-  }
-
-  h2 {
-    font-size: 48px;
-    padding-bottom: 32px;
-    margin-top: 64px;
+  :root {
+    --mobile: 2;
   }
 
   body {
     border: none;
-    margin: 32px;
-  }
-
-  img {
-    margin-top: 32px;
-    margin-bottom: 32px;
-  }
-
-  td a {
-    font-size: 36px;
   }
 }
