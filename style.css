@@ -120,7 +120,15 @@ table.footer {
   padding: calc(var(--mobile) * 4px);
 }
 
-table.footer > tbody > tr > td > img {
+table.footer > tbody > tr {
+  height: calc(var(--mobile) * 12px);
+}
+
+table.footer > tbody > tr > td {
+  height: 100%;
+}
+
+table.footer > tbody > tr > td > a > img {
   display: inline-block;
   margin: 0;
   height: calc(var(--mobile) * 12px);
