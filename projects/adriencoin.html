@@ -21,7 +21,169 @@
     <td><a href="/gallery">Gallery</a></td>
   </tr></table>
 
+  <table class="bordered">
+    <tr><th>Project Links</th></tr>
+    <tr><td><a target="_blank" href="https://github.com/kolin63/adriencoin">Github</a></td></tr>
+  </table>
+
   <p>
+  Adriencoin is a text-based socially- and economically- driven MMORPG. You work
+  and trade for resources to become rich. It is what eventually grew into
+  <a target="_blank" href="/projects/endian.html">Endian</a>.
+  </p>
+
+  <h2>History</h2>
+
+  <p>
+  Adriencoin was originally made as a social experiment by my friend Elliot Han.
+  He made a Discord server and outlined a set of rules (a lot of rules).
+  </p>
+
+  <p>
+  For context, everything was themed after my friend Adrien Lee (and Hypixel
+  Skyblock, but that's not important right now).
+  </p>
+
+  <p>
+  When you joined the server, you would tell Elliot which job you wanted. Then,
+  there was one channel where you could send a message once every six hours to
+  do your job and get resources. Each time you worked, you would get some
+  Adriencoin and a resource specific to your job. For example, a lumberjack
+  would get Adriencoin and Wood for working.
+  </p>
+
+  <p>
+  With your Adriencoin and your resources, you could buy items or upgrades from
+  the shop (some of which only existed to flex your wealth). Since you could
+  only get one resource from your job, players were forced into trading with
+  others.
+  </p>
+
+  <p>
+  Something which you must understand is that there was no code involved in this
+  version of Adriencoin. Everything that happened was fully moderated by Elliot,
+  all by hand. As I'm sure you can imagine, this got increasingly difficult for
+  him over time, and the game eventually slowed to a stop.
+  </p>
+
+  <h2>Season 2</h2>
+
+  <p>
+  Since my friends and I had a lot of fun playing Adriencoin, we were sad to see
+  it go. I wanted to keep playing, but I definitely did not want to take on the
+  job of managing everybody's inventories. That is why I made the Discord bot.
+  </p>
+
+  <p>
+  I made the bot in C++, with the
+  <a target="_blank" href="https://dpp.dev">DPP</a> library.
+  </p>
+
+  <p>
+  The bot provided specific commands which could be run to play the game. This
+  meant that everything happened automatically and that save data was stored in
+  the bot's server.
+  </p>
+
+  <p>
+  I was able to update the game multiple times, and it lasted for a few months.
+  It had a good run, but development eventually stalled, mostly because of poor
+  design choices which I made in the code architecture. Essentially, it became
+  increasingly difficult to add features as the codebase grew.
+  </p>
+
+  <h2>Lessons and Growth</h2>
+
+  <p>
+  Making Adriencoin was an amazing experience for me. Most notably, it was the
+  first project of mine that people actually used. It is is a really amazing
+  feeling to know that your friends are having fun with something that you made.
+  </p>
+
+  <p>
+  Furthermore, Adriencoin was a multiplayer and live-service game. If there was
+  a bug, I had to fix it as soon as possible- or risk crashing the servers,
+  losing items, etc. If there weren't any new updates, the game would get
+  boring. This gave me more motivation than I have ever had to actually get work
+  done on a project.
+  </p>
+
+  <p>
+  For example, once I had an undefined behavior bug from missing an early return
+  in a player-related function. When one of my friends joined, his inventory
+  started with over a million Adriencoin, rather than zero.
+  </p>
+
+  <p>
+  This was already a couple months after the game had started, so I was very
+  worried that the economy would crash immediately. Even worse, this meant that
+  there was even more (terribly written) code which I had to scour through for
+  the source of the bug.
+  </p>
+
+  <p>
+  Something else this taught me was the value of using Git in an organized
+  manner. When I had to release a hotfix or a patch, my code changes were nicely
+  seperated into different branches. This meant that even if I had a large
+  content update in the works, I was able to deploy a stable version of the
+  codebase without losing any progress.
+  </p>
+
+  <h2>Unintentional Philosophy</h2>
+
+  <p>
+  I don't think that Elliot or I realized this at the time, but Adriencoin
+  filled a really specific niche that could be valuable to more than just my
+  friend group.
+  </p>
+
+  <p>
+  Here's what I think:
+  </p>
+
+  <p>
+  MMORPG's (Massively Multiplayer Online Role Playing Game) were originally made
+  as a wrapper around a chatroom. In the early days of the internet, all that
+  people wanted to do was talk to each other. So, some people had the idea to
+  put a game around it.
+  </p>
+
+  <p>
+  The value of these games was not necessarily the game itself, but the fact
+  that you could hang out with other people. You could skill with them, run
+  dungeons with them, or kill a big monster with them.
+  </p>
+
+  <p>
+  Modern MMO's, however, are more like a singleplayer game in the context of
+  other people. Games like Runescape, WOW, or Hypixel Skyblock hardly ever
+  require you to interact with others. And when you do, you don't really want
+  to talk because everybody is extremely toxic and rude.
+  </p>
+
+  <p>
+  On the other hand, Adriencoin brings the MMO back to the chat room. By
+  literally being inside of Discord, the place where every gamer goes to talk,
+  they do exactly that: talk.
+  </p>
+
+  <p>
+  If you go into the Adriencoin server to run the <code>/work</code> command,
+  that is likely not the only thing you will do. Maybe you will browse the shop,
+  see something which you are close to buying, but realize that you are short on
+  carrots. Then, you send a message to somebody who has the Farmer job, offering
+  some Adriencoin for their carrots. The conversation continues, etc, etc.
+  </p>
+
+  <p>
+  Hopefully you can see the value in this. Adriencoin elicits social
+  interaction, something which the world needs a lot more of in this day and
+  age.
+  </p>
+
+  <p>
+  This idea is now being developed as a part of
+  <a target="_blank" href="/projects/endian.html">Endian</a>.
   </p>
 
   <table class="footer"><tr><td>Made with</td><td><a target="_blank" href="https://youtu.be/1tkohYmoKeg"><img src="/assets/souls.webp" alt="<3"></a></td><td>by Colin</td></tr></table>
