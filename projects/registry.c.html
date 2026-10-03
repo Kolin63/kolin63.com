@@ -21,7 +21,38 @@
     <td><a href="/gallery">Gallery</a></td>
   </tr></table>
 
+  <table class="bordered">
+    <tr><th>Project Links</th></tr>
+    <tr><td><a target="_blank" href="https://github.com/kolin63/registry.c">Github</a></td></tr>
+  </table>
+
   <p>
+  registry.c is a simple, lightweight, and easy to use registry library for C.
+  </p>
+
+  <p>
+  I made this for <a target="_blank" href="/projects/endian.html">Endian</a>,
+  which needed a lot of registries (at least, until I switched to my Static Code
+  Generation).
+  </p>
+
+  <p>
+  A registry is a data structure for storing a lot of data, made for slow writes
+  but fast reads. In my library, registries are generic, meaning that they can
+  store any data type. Internally, it stores data in an ordered array, so that
+  it can find an item using a binary search.
+  </p>
+
+  <p>
+  The binary search uses a comparison function for the binary search, which is
+  provided by the caller upon the registries initialization. The caller can also
+  provide a cleanup function, which makes it very easy to prevent memory leaks!
+  </p>
+
+  <p>
+  I put a lot of effort into making this performant and simple to understand,
+  and the effort has paid off! I have already been able to use this library
+  in multiple different projects.
   </p>
 
   <table class="footer"><tr><td>Made with</td><td><a target="_blank" href="https://youtu.be/1tkohYmoKeg"><img src="/assets/souls.webp" alt="<3"></a></td><td>by Colin</td></tr></table>
