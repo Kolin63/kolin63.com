@@ -39,7 +39,6 @@ body {
   margin-right: auto;
   margin-top: calc(var(--mobile) * 16px);
   margin-bottom: calc(var(--mobile) * 16px);
-  min-height: 90vh;
 }
 
 hr {
