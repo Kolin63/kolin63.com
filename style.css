@@ -114,10 +114,15 @@ table.footer {
   max-width: 80ch;
   max-height: calc(var(--mobile) * 16px);
   font-size: calc(var(--mobile) * 12px);
+  margin-top: calc(var(--mobile) * 64px);
+  margin-bottom: calc(var(--mobile) * 8px);
   margin-left: auto;
   margin-right: auto;
   background: lightgray;
-  padding: calc(var(--mobile) * 4px);
+  padding-top: calc(var(--mobile) * 4px);
+  padding-bottom: calc(var(--mobile) * 4px);
+  padding-left: calc(var(--mobile) * 16px);
+  padding-right: calc(var(--mobile) * 16px);
 }
 
 table.footer > tbody > tr {
