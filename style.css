@@ -38,12 +38,13 @@ h3 {
 
 body {
   padding: calc(var(--mobile) * 16px);
+  padding-bottom: 0;
   border: 1px solid black;
   max-width: 80ch;
   margin-left: auto;
   margin-right: auto;
   margin-top: calc(var(--mobile) * 16px);
-  margin-bottom: calc(var(--mobile) * 16px);
+  margin-bottom: calc(var(--mobile) * 64px);
 }
 
 hr {
@@ -114,33 +115,35 @@ code.block {
   border: 1px solid gray;
 }
 
-table.footer {
+div.footer {
+  display: block;
   max-width: 80ch;
-  max-height: calc(var(--mobile) * 16px);
-  font-size: calc(var(--mobile) * 12px);
-  margin-top: calc(var(--mobile) * 64px);
-  margin-bottom: calc(var(--mobile) * 8px);
+  position: relative;
+  top: calc(var(--mobile) * 52px);
+  margin: 0;
+}
+
+div.footer > a {
+  color: black;
+  text-decoration: none;
+}
+
+div.footer > a > table {
   margin-left: auto;
   margin-right: auto;
-  background: lightgray;
-  padding-top: calc(var(--mobile) * 4px);
-  padding-bottom: calc(var(--mobile) * 4px);
-  padding-left: calc(var(--mobile) * 16px);
-  padding-right: calc(var(--mobile) * 16px);
 }
 
-table.footer > tbody > tr {
-  height: calc(var(--mobile) * 12px);
-}
-
-table.footer > tbody > tr > td {
-  height: 100%;
-}
-
-table.footer > tbody > tr > td > a > img {
-  display: inline-block;
+div.footer > a > table > tbody > tr > td > img {
   margin: 0;
-  height: calc(var(--mobile) * 12px);
+  height: 100%;
+  object-fit: cover;
+  filter: drop-shadow(gray 1px 1px 2px) grayscale(100%);
+  transition: filter 0.05s;
+}
+
+div.footer > a:hover > table > tbody > tr > td > img {
+  filter: drop-shadow(gray 1px 1px 2px) grayscale(0%);
+  transition: filter 0.05s;
 }
 
 @media screen and (orientation: portrait) {
