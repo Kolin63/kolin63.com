@@ -13,7 +13,7 @@ p, a {
   text-align: justify;
   text-justify: inter-word;
   margin-top: calc(var(--mobile) * 16px);
-  margin-bottom: calc(var(--mobile) * 16px);
+  margin-bottom: 0;
   margin-left: 0;
   margin-right: 0;
 }
