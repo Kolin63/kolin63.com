@@ -18,6 +18,10 @@ p, a {
   margin-right: 0;
 }
 
+b > a {
+  color: black;
+}
+
 h1 {
   font-size: calc(var(--mobile) * 32px);
   padding-bottom: calc(var(--mobile) * 16px);
@@ -87,6 +91,15 @@ table.bordered > tbody > tr > th {
 table.bordered > tbody > tr > td {
   border: 1px solid black;
   padding: calc(var(--mobile) * 4px);
+}
+
+table.lr {
+  margin: 0;
+  padding: 0;
+}
+
+table.lr > td.r {
+  width: calc(var(--mobile) * 8ch);
 }
 
 img {
