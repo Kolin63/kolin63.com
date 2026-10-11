@@ -183,3 +183,14 @@ div.footer > a:hover > table > tbody > tr > td > img {
     border: none;
   }
 }
+
+@media print {
+  table.external-links, table.navigation-links, div.footer {
+    display: none;
+    height: 0;
+  }
+
+  body {
+    border: none;
+  }
+}
