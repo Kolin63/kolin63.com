@@ -185,7 +185,7 @@ div.footer > a:hover > table > tbody > tr > td > img {
 }
 
 @media print {
-  table.external-links, table.navigation-links, div.footer {
+  table.external-links, table.navigation-links, div.footer, .hide-on-print {
     display: none;
     height: 0;
   }
