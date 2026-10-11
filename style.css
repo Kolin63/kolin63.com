@@ -94,12 +94,27 @@ table.bordered > tbody > tr > td {
 }
 
 table.lr {
+  width: 100%;
+}
+
+table.lr > tbody > tr > td > p, a {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+table.lr > tbody > tr > td {
   margin: 0;
   padding: 0;
 }
 
-table.lr > td.r {
-  width: calc(var(--mobile) * 8ch);
+table.lr > tbody > tr > td.left {
+  width: 85%;
+}
+
+table.lr > tbody > tr > td.right {
+  width: 15%;
+  text-align: right;
 }
 
 img {
