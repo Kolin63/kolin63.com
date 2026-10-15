@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<head>
+  <title>Midnight Thoughts</title>
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <table class="external-links"><tr>
+    <td><a target="_blank" href="https://github.com/kolin63">GitHub</a></td>
+    <td><a target="_blank" href="https://youtube.com/@kolin3f">YouTube</a></td>
+    <td><a target="_blank" href="mailto:colinmelican@gmail.com">E-Mail</a></td>
+  </tr></table>
+
+  <h1>Midnight Thoughts</h1>
+
+  <table class="navigation-links"><tr>
+    <td><a href="/">Home</a></td>
+    <td><a href="/projects">Projects</a></td>
+    <td><a href="/resume">Resume</a></td>
+  </tr></table>
+
+  <table class="navigation-links"><tr>
+    <td><a href="/blog">Blog</a></td>
+    <td>2026-10-15-0</td>
+  </tr></table>
+
+  <p>
+  Well, I was GOING to just write about a few things I was thinking about. Then
+  I got sidetracked and ended up writing a script to automatically make a new
+  html file so that I can more easily write a blog entry.
+  </p>
+
+  <p>
+  It's quite nice: it asks me what I want the title to be, then it makes the
+  file name based off of the date, and indexes it if there are multiple blog
+  entries on one day. Then it updates the list, then updates the index.html
+  (using a prefix and postfix file), then generates a new html file with all of
+  the boiler plate already there.
+  </p>
+
+  <p>
+  Anyways, now what I was originally planning to write about:
+  </p>
+
+  <p>
+  I'm studying for my precalc quiz. Turk, or Sean Turkington, is my teacher. He
+  is a really good teacher and a nice guy, but right now I have a C-. I did the
+  math, and I need about 40 more points to end with a B- for this quarter. I
+  should be able to get an A for the semester though.
+  </p>
+
+  <p>
+  So I was doing some graphing on Desmos, then I switched tabs and I still saw
+  part of the left half of Desmos. It was a weird flickery effect. First, I
+  closed Firefox (didn't work), then I restarted Wayland and DWL (didn't work),
+  then I restarted my computer.
+  </p>
+
+  <p>
+  When the monitor went blue because of having no HDMI signal, I noticed
+  something really weird: the flickering was still there, on the blue screen!
+  I got really scared because I thought the monitor was cooked. I tried factory
+  reseting it and everything, but to no avail.
+  </p>
+
+  <p>
+  Then I wrote a bash script to make new blog html files. In that time, the
+  flickering went away.
+  </p>
+
+  <p>
+  I was worried that I would need to get a new monitor, but thankfully,
+  everything is alright!
+  </p>
+
+  <hr>
+
+  <p>
+  Also, I was thinking a bit about Endian.
+  </p>
+
+  <p>
+  So, my very original plan was to use a Goldberg polyhedron to represent the
+  planets. That way, it could have a hex grid (besides 12 pentagons), and as we
+  know, hexagons are the bestagons.
+  </p>
+
+  <p>
+  The problem with that was the 12 pentagons. Very infuriating. So, I decided
+  to instead use a square tile grid on cube planets, where the planets are
+  divided into 6 sectors (the faces of the cube). This has the added benefit of
+  being far easier to represent in a text-based environment.
+  </p>
+
+  <p>
+  Now that I think of it, the text based part is actually the main reason I
+  switched from Goldberg Polyhedra.
+  </p>
+
+  <p>
+  Ok, but now I'm thinking: maybe I shouldn't have a tile system at all!
+  </p>
+
+  <p>
+  The main reason I'm thinking this is because of the gameplay. Especially if
+  you're on your phone, looking at an ASCII tile grid and figuring out what
+  coordinates you want to move to would be a pain. Also, planets are big, so
+  there would be a lot of tiles, and most of them would probably be useless.
+  </p>
+
+  <p>
+  My new idea is to use a POI system. There would be different types--or
+  filters, depending on how I want to structure it--of POI's; for example,
+  cities, ore deposits, forests, and space stations.
+  </p>
+
+  <p>
+  Each POI would have a DMS position, rather than a position locked on a tile
+  grid. I guess, the DMS position is still a grid, but a much less limiting one.
+  </p>
+
+  <p>
+  Then, you can list out the nearby POI's and decide where you want to move to!
+  </p>
+
+  <p>
+  Really the main point of this switch is reducing entropy-- being able to find
+  what you want quicker and easier.
+  </p>
+
+  <p>
+  Also, I mentioned DMS. Of course, that is only relevant to Earth. I'm not sure
+  how I'll handle that on other planets for now. I'll probably just have a
+  position struct that calls the fields DMS, but does not necesarilly mean
+  Earth coordinates.
+  </p>
+
+  <p>
+  Then, I can have the numbers mean different things on
+  different planets. Probably the amount of degrees in a circumference would be
+  relative to the length of the circumference. So Jupiter would have a lot more
+  degrees in its circumference.
+  </p>
+
+  <p>
+  I guess before I do that, I should check if there is already a system
+  invented by the scientists!
+  </p>
+
+  <p>
+  Anyways, it's past 1am right now and I still have that Turk quiz tomorrow. I
+  think I'm ready for it! Oh, I also have a music theory quiz. But, tomorrow's
+  Thursday, which means I get to take a nap after school! Yippee!!!
+  </p>
+
+  <div class="footer"><a target="_blank" href="https://youtu.be/1tkohYmoKeg"><table><tr><td>Made with</td><td><img src="/assets/souls.webp" alt="<3"></td><td>by Colin</td></tr></table></a></div>
+
+</body>
