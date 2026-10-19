@@ -26,3 +26,7 @@ mv blog/new_list.txt blog/list.txt
 
 cat blog/prefix.html blog/list.txt blog/postfix.html > blog/index.html
 printf "$(cat blog/template.html)" "$title" "$title" "$file_id" > "blog/$file_id.html"
+
+if [[ ! -z "$EDITOR" ]]; then
+  $EDITOR blog/$file_id.html
+fi
