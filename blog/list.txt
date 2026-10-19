@@ -1,3 +1,4 @@
+    <li><a href="/blog/2026-10-18-2.html">Computer Club</a> (2026-10-18-2)</li>
     <li><a href="/blog/2026-10-18-1.html">Updated blog script</a> (2026-10-18-1)</li>
     <li><a href="/blog/2026-10-18-0.html">Factorio</a> (2026-10-18-0)</li>
     <li><a href="/blog/2026-10-15-0.html">Midnight Thoughts</a> (2026-10-15-0)</li>
