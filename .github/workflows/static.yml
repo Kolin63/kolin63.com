@@ -1,4 +1,4 @@
-name: Generate sitemap and Deploy static content to Pages
+name: Generate sitemap and deploy static content to Pages
 
 on:
   push:
@@ -18,7 +18,7 @@ concurrency:
 jobs:
   sitemap_job:
     runs-on: ubuntu-latest
-    name: Generate a sitemap
+    name: Generate sitemap and deploy static content to Pages
 
     steps:
     - name: Checkout the repo
@@ -33,27 +33,21 @@ jobs:
         base-url-path: https://kolin63.com/
         exclude-paths: /blog
 
-    - name: Output stats
+    - name: Output sitemap stats
       run: |
         echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}"
         echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
         echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
 
+    - name: Setup Pages
+      uses: actions/configure-pages@v5
+
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        # Upload entire repository
+        path: '.'
+
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v5
