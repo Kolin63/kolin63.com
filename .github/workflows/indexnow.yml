@@ -2,7 +2,7 @@ name: Update IndexNow
 on:
   schedule:
     - cron: '0 2 * * *'
-on: workflow-dispatch
+  workflow-dispatch:
 
 jobs:
   check-and-submit:
