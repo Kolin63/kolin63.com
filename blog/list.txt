@@ -1,3 +1,4 @@
+    <li><a href="/blog/2026-10-23-1.html">Plausibility of a non-internet enabled device</a> (2026-10-23-1)</li>
     <li><a href="/blog/2026-10-23-0.html">Bing IndexNow</a> (2026-10-23-0)</li>
     <li><a href="/blog/2026-10-22-1.html">THE ARCHIVES</a> (2026-10-22-1)</li>
     <li><a href="/blog/2026-10-22-0.html">Changes will be coming!</a> (2026-10-22-0)</li>
