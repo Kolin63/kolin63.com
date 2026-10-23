@@ -1,4 +1,4 @@
-name: Generate sitemap and deploy static content to Pages
+name: Generate sitemap, deploy static content to Pages, and update IndexNow
 
 on:
   push:
@@ -16,9 +16,9 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  sitemap_job:
+  static_job:
     runs-on: ubuntu-latest
-    name: Generate sitemap and deploy static content to Pages
+    name: Generate sitemap, deploy static content to Pages, and update IndexNow
 
     steps:
     - name: Checkout the repo
@@ -39,6 +39,9 @@ jobs:
         echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
         echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
 
+    - name: Setup IndexNow
+      run: echo ${{ secrets.INDEXNOW_KEY }} > ${{ secrets.INDEXNOW_KEY }}.txt
+
     - name: Setup Pages
       uses: actions/configure-pages@v5
 
@@ -51,3 +54,10 @@ jobs:
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v5
+
+    - name: Update IndexNow
+      uses: bojieyang/indexnow-action@v3
+      with:
+        sitemap-location: 'https://kolin63.com/sitemap.xml'
+        key: ${{ secrets.INDEXNOW_KEY }}
+
