@@ -1,0 +1,17 @@
+name: Update IndexNow
+on:
+  schedule:
+    - cron: '0 2 * * *'
+on: workflow-dispatch
+
+jobs:
+  check-and-submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup IndexNow
+        run: echo ${{ secrets.INDEXNOW_KEY }} > ${{ secrets.INDEXNOW_KEY }}.txt
+      - name: Update IndexNow
+        uses: bojieyang/indexnow-action@v3
+        with:
+          sitemap-location: 'https://kolin63.com/sitemap.xml'
+          key: ${{ secrets.INDEXNOW_KEY }}
