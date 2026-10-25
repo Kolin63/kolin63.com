@@ -20,7 +20,7 @@ printf "\e[1;93mBlog Title: \e[0m\e[4;37m"
 read title
 printf "\e[0m"
 
-list_entry="    <li><a href=\"/blog/$file_id.html\">$title</a> ($file_id)</li>"
+list_entry="    <table class=\"lr\"><tr><td class=\"left\"><li><a href=\"/blog/$file_id.html\">$title</a></li></td><td class=\"right\">$file_id</td></tr></table>"
 echo "$list_entry" | cat - blog/list.txt > blog/new_list.txt
 mv blog/new_list.txt blog/list.txt
 
