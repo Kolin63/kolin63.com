@@ -109,12 +109,16 @@ table.lr > tbody > tr > td {
 }
 
 table.lr > tbody > tr > td.left {
-  width: 85%;
+  width: 80%;
 }
 
 table.lr > tbody > tr > td.right {
-  width: 15%;
+  width: 20%;
   text-align: right;
+}
+
+table.lr > tbody > tr > td.left > ul {
+  margin: 0;
 }
 
 img {
