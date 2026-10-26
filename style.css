@@ -115,6 +115,7 @@ table.lr > tbody > tr > td.left {
 table.lr > tbody > tr > td.right {
   width: 20%;
   text-align: right;
+  vertical-align: top;
 }
 
 table.lr > tbody > tr > td.left > ul {
