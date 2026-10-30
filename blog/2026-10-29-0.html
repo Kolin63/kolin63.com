@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+  <meta name="robots" content="noindex">
+  <title>Finally continued Endian design</title>
+  <meta name="description" content="Colin Melican's private blog">
+  <meta http-equiv="content-language" content="en-us">
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <table class="external-links"><tr>
+    <td><a target="_blank" href="https://github.com/kolin63">GitHub</a></td>
+    <td><a target="_blank" href="https://youtube.com/@kolin3f">YouTube</a></td>
+    <td><a target="_blank" href="mailto:colinmelican@gmail.com">E-Mail</a></td>
+  </tr></table>
+
+  <h1>Finally continued Endian design</h1>
+
+  <table class="navigation-links"><tr>
+    <td><a href="/">Home</a></td>
+    <td><a href="/projects">Projects</a></td>
+    <td><a href="/resume">Resume</a></td>
+  </tr></table>
+
+  <table class="navigation-links"><tr>
+    <td><a href="/blog">Blog</a></td>
+    <td>2026-10-29-0</td>
+  </tr></table>
+
+  <p>
+  I said I would finish writing about Endian design, and I wasn't lying! I just
+  finished adding a blame feature to the reflector, and I did some cleanup on
+  the base mod repo, so I'm ready to get going! That is, on a later date,
+  because I should really be going to be soon.
+  </p>
+
+  <p>
+  Anyways, the overall structure/hierarchy is this:
+  <ul>
+    <li>
+      something - a "class" definition or "template" or "interface"
+      <ul>
+        <li>
+          something_coms - a component is a struct that is given to each
+          instance of a something; the values of the component can be
+          different per something.
+        </li>
+        <li>
+          something_tags - a tag is applied to each type of something,
+          <i>not</i> each individual instance. A tag holds no data; it only
+          specifies what this type of something is.
+        </li>
+        <li>
+          something_rich_tags - a rich tag is the same as a tag, except it can
+          hold data. The data it holds is constant, cannot change at runtime,
+          and cannot change between instances of something.
+        </li>
+      </ul>
+    </li>
+  </ul>
+  </p>
+
+  <p>
+  I realize now that this sort of goes against jblow's "low friction" ideology.
+  I'm not sure if there's a way to remove the friction without completely
+  changing how this works.
+  </p>
+
+  <p>
+  This is just the structure of the mod. I will write about actual gameplay
+  later. Time for bed!
+  </p>
+
+  <div class="footer"><a target="_blank" href="https://youtu.be/1tkohYmoKeg"><table><tr><td>Made with</td><td><img src="/assets/souls.webp" alt="<3" title="DETERMINATION, PATIENCE, BRAVERY, INTEGRIY, PERSEVERANCE, KINDNESS, and JUSTICE"></td><td>by Colin</td></tr></table></a></div>
+
+</body>
