@@ -27,9 +27,9 @@ jobs:
         fetch-depth: 0
 
     - name: Get blog
+      env:
+        GH_TOKEN: ${{ github.token }}
       run: |
-        eval `ssh-agent -s`
-        ssh-add - <<< '${{ secrets.PRIVATE_SSH_KEY }}'
         gh repo clone kolin63/blog .blog
         cp -r .blog/blog blog
 
