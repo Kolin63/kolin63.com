@@ -28,7 +28,7 @@ jobs:
 
     - name: Get blog
       env:
-        GH_TOKEN: ${{ github.token }}
+        GH_TOKEN: ${{ secrets.BLOG_FETCH_TOKEN }}
       run: |
         gh repo clone kolin63/blog .blog
         cp -r .blog/blog blog
