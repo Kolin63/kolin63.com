@@ -28,6 +28,8 @@ jobs:
 
     - name: Get blog
       run: |
+        eval `ssh-agent -s`
+        ssh-add - <<< '${{ secrets.PRIVATE_SSH_KEY }}'
         git clone https://github.com/kolin63/blog .blog
         cp -r .blog/blog blog
 
