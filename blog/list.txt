@@ -1,3 +1,4 @@
+    <table class="lr"><tr><td class="left"><li><a href="/blog/2026-11-05-0.html">Learning sockets and Arch Codespace</a></li></td><td class="right">2026-11-05-0</td></tr></table>
     <table class="lr"><tr><td class="left"><li><a href="/blog/2026-10-30-0.html">MORE Endian Design!</a></li></td><td class="right">2026-10-30-0</td></tr></table>
     <table class="lr"><tr><td class="left"><li><a href="/blog/2026-10-29-0.html">Finally continued Endian design</a></li></td><td class="right">2026-10-29-0</td></tr></table>
     <table class="lr"><tr><td class="left"><li><a href="/blog/2026-10-26-0.html">Credits</a></li></td><td class="right">2026-10-26-0</td></tr></table>
