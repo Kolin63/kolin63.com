@@ -26,6 +26,11 @@ jobs:
       with:
         fetch-depth: 0
 
+    - name: Get blog
+      run: |
+        git clone https://github.com/kolin63/blog .blog
+        cp -r .blog/blog blog
+
     - name: Generate the sitemap
       id: sitemap
       uses: cicirello/generate-sitemap@v1.10.4
