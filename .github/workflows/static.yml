@@ -35,6 +35,7 @@ jobs:
       run: |
         gh repo clone kolin63/blog .blog
         cp -r .blog/blog blog
+        rm -rf .blog
 
     - name: Generate the sitemap
       id: sitemap
